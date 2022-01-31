@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="heading">Find Your Makeup Products</h1>
+    <form class="searchContainer row" id="filterData">
+        <div class="col-12 col-md-6">
+        <input placeholder="Brand Name ex:Pure Anada,green people etc..," oninput="handleFilterChange()" class="searchInput" id="brandName" value="">
+        </div>
+        <div class="col-12 col-md-6">
+        <input placeholder="Product Type ex:Nail Polish,Lip liner etc..," oninput="handleFilterChange()" class="searchInput" id="productType" value="">
+        </div>
+        <div class="buttonsWrapper">
+            <a class="waves-effect waves-light btn" id="filterSubmit" onclick="handleApplyFilter()"><i class="material-icons left">filter_list</i>Apply filter</a>
+            <a class="waves-effect waves-light btn" id="clearFilter" onclick="handleClearFilter()"><i class="material-icons left">clear_all</i>Clear filter</a>
+        </div>
+    </form>
+    <div class="availabilitiesWrapper">
+        <button class="availabilities" id="availableBrands" onclick="handleAvailableBrands()">Hide Available Brands </button>
+          <div class="brandsWrapper" style="display: flex;"><div class="brandAndProds" id="brand0" onclick="setBrandFilter(0)">almay</div><div class="brandAndProds" id="brand1" onclick="setBrandFilter(1)">alva</div><div class="brandAndProds" id="brand2" onclick="setBrandFilter(2)">anna sui</div><div class="brandAndProds" id="brand3" onclick="setBrandFilter(3)">annabelle</div><div class="brandAndProds" id="brand4" onclick="setBrandFilter(4)">benefit</div><div class="brandAndProds" id="brand5" onclick="setBrandFilter(5)">boosh</div><div class="brandAndProds" id="brand6" onclick="setBrandFilter(6)">burt's bees</div><div class="brandAndProds" id="brand7" onclick="setBrandFilter(7)">butter london</div><div class="brandAndProds" id="brand8" onclick="setBrandFilter(8)">c'est moi</div><div class="brandAndProds" id="brand9" onclick="setBrandFilter(9)">cargo cosmetics</div><div class="brandAndProds" id="brand10" onclick="setBrandFilter(10)">china glaze</div><div class="brandAndProds" id="brand11" onclick="setBrandFilter(11)">clinique</div><div class="brandAndProds" id="brand12" onclick="setBrandFilter(12)">coastal classic creation</div><div class="brandAndProds" id="brand13" onclick="setBrandFilter(13)">colourpop</div><div class="brandAndProds" id="brand14" onclick="setBrandFilter(14)">covergirl</div><div class="brandAndProds" id="brand15" onclick="setBrandFilter(15)">dalish</div><div class="brandAndProds" id="brand16" onclick="setBrandFilter(16)">deciem</div><div class="brandAndProds" id="brand17" onclick="setBrandFilter(17)">dior</div><div class="brandAndProds" id="brand18" onclick="setBrandFilter(18)">dr. hauschka</div><div class="brandAndProds" id="brand19" onclick="setBrandFilter(19)">e.l.f.</div><div class="brandAndProds" id="brand20" onclick="setBrandFilter(20)">essie</div><div class="brandAndProds" id="brand21" onclick="setBrandFilter(21)">fenty</div><div class="brandAndProds" id="brand22" onclick="setBrandFilter(22)">glossier</div><div class="brandAndProds" id="brand23" onclick="setBrandFilter(23)">green people</div><div class="brandAndProds" id="brand24" onclick="setBrandFilter(24)">iman</div><div class="brandAndProds" id="brand25" onclick="setBrandFilter(25)">l'oreal</div><div class="brandAndProds" id="brand26" onclick="setBrandFilter(26)">lotus cosmetics usa</div><div class="brandAndProds" id="brand27" onclick="setBrandFilter(27)">maia's mineral galaxy</div><div class="brandAndProds" id="brand28" onclick="setBrandFilter(28)">marcelle</div><div class="brandAndProds" id="brand29" onclick="setBrandFilter(29)">marienatie</div><div class="brandAndProds" id="brand30" onclick="setBrandFilter(30)">maybelline</div><div class="brandAndProds" id="brand31" onclick="setBrandFilter(31)">milani</div><div class="brandAndProds" id="brand32" onclick="setBrandFilter(32)">mineral fusion</div><div class="brandAndProds" id="brand33" onclick="setBrandFilter(33)">misa</div><div class="brandAndProds" id="brand34" onclick="setBrandFilter(34)">mistura</div><div class="brandAndProds" id="brand35" onclick="setBrandFilter(35)">moov</div><div class="brandAndProds" id="brand36" onclick="setBrandFilter(36)">nudus</div><div class="brandAndProds" id="brand37" onclick="setBrandFilter(37)">null</div><div class="brandAndProds" id="brand38" onclick="setBrandFilter(38)">nyx</div><div class="brandAndProds" id="brand39" onclick="setBrandFilter(39)">orly</div><div class="brandAndProds" id="brand40" onclick="setBrandFilter(40)">pacifica</div><div class="brandAndProds" id="brand41" onclick="setBrandFilter(41)">penny lane organics</div><div class="brandAndProds" id="brand42" onclick="setBrandFilter(42)">physicians formula</div><div class="brandAndProds" id="brand43" onclick="setBrandFilter(43)">piggy paint</div><div class="brandAndProds" id="brand44" onclick="setBrandFilter(44)">pure anada</div><div class="brandAndProds" id="brand45" onclick="setBrandFilter(45)">rejuva minerals</div><div class="brandAndProds" id="brand46" onclick="setBrandFilter(46)">revlon</div><div class="brandAndProds" id="brand47" onclick="setBrandFilter(47)">sally b's skin yummies</div><div class="brandAndProds" id="brand48" onclick="setBrandFilter(48)">salon perfect</div><div class="brandAndProds" id="brand49" onclick="setBrandFilter(49)">sante</div><div class="brandAndProds" id="brand50" onclick="setBrandFilter(50)">sinful colours</div><div class="brandAndProds" id="brand51" onclick="setBrandFilter(51)">smashbox</div><div class="brandAndProds" id="brand52" onclick="setBrandFilter(52)">stila</div><div class="brandAndProds" id="brand53" onclick="setBrandFilter(53)">suncoat</div><div class="brandAndProds" id="brand54" onclick="setBrandFilter(54)">w3llpeople</div><div class="brandAndProds" id="brand55" onclick="setBrandFilter(55)">wet n wild</div><div class="brandAndProds" id="brand56" onclick="setBrandFilter(56)">zorah</div><div class="brandAndProds" id="brand57" onclick="setBrandFilter(57)">zorah biocosmetiques</div></div>
+        <button class="availabilities" id="availableProducts" onclick="handleAvailableProducts()">See Available Products</button>
+          <div class="productTypesWrapper" style="display:none"></div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
